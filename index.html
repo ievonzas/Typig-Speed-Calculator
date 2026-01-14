@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test your typing skills</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- Section 1: Introduction -->
+    <section id="introduction">
+        <h1 class="header-text">
+            Test your typing speed!
+        </h1>
+        <div class="intro-text">
+            <p>
+                Type the words provided in "Text to type" into the "Your input" box as fast as you can in 60 seconds.
+                When the time is up, scroll down and you will see your words per minute, accuracy and statistics.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 2: Text and Input -->
+    <section id="typing-area">
+        <h2>Typing Test</h2>
+        <div class="timer-position">
+            <div class="timer-box">
+                <span id="timerDisplay">60</span>
+            </div>
+        </div>
+        <div class="text-and-input-display">
+            <label for="textContainer">Text to type</label>
+            <div class="text-container" id="textContainer"></div>
+            <label for="quote-input">Your input</label>
+            <textarea id="quote-input" class="quote-input" autofocus placeholder="Start typing"></textarea>
+        </div>
+        <div class="controls">
+            <button id="resetBtn" class="control-btn">Reset test</button>
+            <div class="instructions">
+                <p>Press <strong>Enter</strong> to start a new test, <strong>Esc</strong> to reset input</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Current Statistics -->
+    <section id="current-stats">
+        <h2>Current Statistics</h2>
+        <div class="user-statistics">
+            <div class="boxes-for-stats">
+                <label class="stat-label" for="wpmDisplay">Words Per Minute</label>
+                <div class="box-for-wpm" id="wpmDisplay">
+                    0
+                </div>
+            </div>
+            <div class="boxes-for-stats">
+                <label class="stat-label" for="accuracyDisplay">Accuracy Percentage</label>
+                <div class="box-for-accuracy-counter" id="accuracyDisplay">
+                    0%
+                </div>
+            </div>
+        </div>
+        <div class="improvement-indicator">
+            <p id="improvementDisplay" style="display:none;">Keep practicing!</p>
+        </div>
+    </section>
+
+    <!-- Section 5: Performance History -->
+    <section id="performance-history">
+        <h2>Performance History</h2>
+        <div class="chart-container" id="chart"></div>
+    </section>
+    <script src="timer.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
